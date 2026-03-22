@@ -1,12 +1,9 @@
 # GSHS Updates Pages
 
-GSHS.app 업데이트 페이지용 GitHub Pages 저장소입니다.
+이 저장소는 현재 deprecated 상태입니다.
 
-- 라이브 페이지: <https://kkwjk2718.github.io/gshs-updates-pages/>
-- 메인 서비스 저장소: <https://github.com/kkwjk2718/gshsapp>
+- 안내 페이지: <https://kkwjk2718.github.io/gshs-updates-pages/>
+- 메인 서비스: <https://gshs.app>
+- 메인 저장소: <https://github.com/kkwjk2718/gshsapp>
 
-## 관련 저장소
-
-- About: <https://github.com/kkwjk2718/gshs-about-pages>
-- Docs: <https://github.com/kkwjk2718/gshs-docs-pages>
-- Status: <https://github.com/kkwjk2718/gshs-status-pages>
+추후 별도 업데이트 페이지를 다시 구성할 때까지 최소 안내 화면만 유지합니다.
