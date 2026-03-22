@@ -21,7 +21,8 @@ const { release } = Astro.props;
     <p class="eyebrow">{release.tagName}</p>
     <h1>{release.title}</h1>
     <p class="release-meta">
-      공개 시각 {new Date(release.publishedAt).toLocaleString("ko-KR", {
+      공개 시각{" "}
+      {new Date(release.publishedAt).toLocaleString("ko-KR", {
         dateStyle: "medium",
         timeStyle: "short",
         timeZone: "Asia/Seoul",
@@ -44,7 +45,7 @@ const { release } = Astro.props;
     }
 
     <div class="release-actions">
-      <a class="cta" href="https://updates.gshs.app">목록으로 돌아가기</a>
+      <a class="cta" href="https://kkwjk2718.github.io/gshs-updates-pages/">목록으로 돌아가기</a>
       <a class="cta secondary" href={release.htmlUrl}>GitHub에서 보기</a>
     </div>
   </article>
