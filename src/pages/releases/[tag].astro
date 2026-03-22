@@ -1,0 +1,51 @@
+---
+import SiteLayout from "../../layouts/SiteLayout.astro";
+import releases from "../../data/releases.json";
+
+export function getStaticPaths() {
+  return releases.map((release) => ({
+    params: { tag: release.tagName },
+    props: { release },
+  }));
+}
+
+const { release } = Astro.props;
+---
+
+<SiteLayout
+  title={`${release.title} | GSHS.app Updates`}
+  description={`${release.title} 배포 기록 상세`}
+  current="updates"
+>
+  <article class="release-detail">
+    <p class="eyebrow">{release.tagName}</p>
+    <h1>{release.title}</h1>
+    <p class="release-meta">
+      공개 시각 {new Date(release.publishedAt).toLocaleString("ko-KR", {
+        dateStyle: "medium",
+        timeStyle: "short",
+        timeZone: "Asia/Seoul",
+      })}
+    </p>
+
+    <p>{release.summary}</p>
+
+    {
+      release.notes.length > 0 && (
+        <>
+          <h2>릴리스 노트</h2>
+          <ul>
+            {release.notes.map((note) => (
+              <li>{note}</li>
+            ))}
+          </ul>
+        </>
+      )
+    }
+
+    <div class="release-actions">
+      <a class="cta" href="https://updates.gshs.app">목록으로 돌아가기</a>
+      <a class="cta secondary" href={release.htmlUrl}>GitHub에서 보기</a>
+    </div>
+  </article>
+</SiteLayout>
